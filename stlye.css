@@ -62,14 +62,16 @@ footer {
 
 #display{
   display:flex;
-  justify-content:center;
-  align-items:center;
+  justify-content:flex-end;
+  align-items:flex-end;
   width:320px;
   height:50px;
   background-color:white;
   border-style:solid;
   border-color:black;
   border-width:3px;
+  color:black;
+  font-size:40px;
 
 }
 
