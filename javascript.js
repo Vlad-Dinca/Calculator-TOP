@@ -63,16 +63,16 @@ let displayString = "";
 let firstNumber = 0;
 let secondNumber = 0;
 let op = "";
-let pressed = false; 
+let pressed = false;
 
 
 zero.addEventListener(("click"), function (event) {
   if (display.innerText[0] != 0 && display.innerText.length < 9) { // first digit can't be 0, unless we add, multiply, subtract or divide
-                                                                   // maximum size of a number can pe 9 digits
+    // maximum size of a number can pe 9 digits
     display.innerText = "0";
     displayString += display.innerText;
     display.innerText = displayString;
-  } 
+  }
 });
 
 one.addEventListener(("click"), function (event) {
@@ -149,7 +149,7 @@ nine.addEventListener(("click"), function (event) {
 
 
 addButton.addEventListener(("click"), function (event) {
-  if (pressed === false && display.innerText !=""){
+  if (pressed === false && display.innerText != "") {
     firstNumber = parseFloat(display.innerText);
     display.innerText = "";
     displayString = "";
@@ -159,7 +159,7 @@ addButton.addEventListener(("click"), function (event) {
 });
 
 subtractButton.addEventListener(("click"), function (event) {
-  if (pressed === false && display.innerText !="") {
+  if (pressed === false && display.innerText != "") {
     firstNumber = parseFloat(display.innerText);
     display.innerText = "";
     displayString = "";
@@ -169,7 +169,7 @@ subtractButton.addEventListener(("click"), function (event) {
 });
 
 multiplyButton.addEventListener(("click"), function (event) {
-  if (pressed === false && display.innerText !="") {
+  if (pressed === false && display.innerText != "") {
     firstNumber = parseFloat(display.innerText);
     display.innerText = "";
     displayString = "";
@@ -179,7 +179,7 @@ multiplyButton.addEventListener(("click"), function (event) {
 });
 
 divideButton.addEventListener(("click"), function (event) {
-  if (pressed === false  && display.innerText !="") {
+  if (pressed === false && display.innerText != "") {
     firstNumber = parseFloat(display.innerText);
     display.innerText = "";
     displayString = "";
@@ -204,6 +204,8 @@ reset.addEventListener(("click"), function (event) {
   pressed = false;
 })
 
+const copyright = document.getElementById("copyright");
+copyright.textContent = `Copyright ©  ${(new Date().getFullYear())} Vlad-Dinca`;
 
 
 
