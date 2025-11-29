@@ -192,7 +192,7 @@ divideButton.addEventListener(("click"), function (event) {
 
 result.addEventListener(("click"), function (event) {
   secondNumber = parseFloat(display.innerText);
-  display.innerText = (operator(firstNumber, secondNumber, op)).toFixed(2).substr(0, 14); // show a maximum of 14 digits on the display.
+  display.innerText = (operator(firstNumber, secondNumber, op)).toFixed(2).substr(0, 11); // show a maximum of 11 digits on the display.
   pressed = false;
 });
 
